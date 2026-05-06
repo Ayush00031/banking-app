@@ -89,19 +89,6 @@ Running the Project
 npm run dev
 Open http://localhost:3000 in your browser to view the project.
 
-🕸️ Snippets
-.env.example
-exchangePublicToken
-user.actions.ts
-dwolla.actions.ts
-bank.actions.ts
-BankTabItem.tsx
-BankInfo.tsx
-Copy.tsx
-PaymentTransferForm.tsx
-Missing from the video (top right on the transaction list page) BankDropdown.tsx
-Pagination.tsx
-Category.tsx
 🔗 Links
 Assets used in the project can be found here
 
