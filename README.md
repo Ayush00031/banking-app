@@ -1,127 +1,108 @@
-💳 Banking App
+🤖 Introduction
+Built with Next.js, Horizon is a financial SaaS platform that connects to multiple bank accounts, displays transactions in real-time, allows users to transfer money to other platform users, and manages their finances altogether.
 
-A modern full-stack banking application built with Next.js 14, TypeScript, Tailwind CSS, Appwrite, Plaid, and Dwolla.
-The application allows users to securely connect bank accounts, view transactions, transfer money, and monitor financial activity through an elegant dashboard.
+If you're getting started and need assistance or face any bugs, join our active Discord community with over 34k+ members. It's a place where people help each other out.
 
-🚀 Features
-🔐 Secure Authentication System
-🏦 Connect Bank Accounts using Plaid
-💸 Transfer Funds with Dwolla Integration
-📊 Financial Dashboard with Charts & Analytics
-📈 Expense & Transaction Tracking
-📱 Fully Responsive UI
-⚡ Fast Performance with Next.js 14 App Router
-🎨 Modern UI using Tailwind CSS + Radix UI
-🧾 Form Validation using React Hook Form + Zod
-📉 Interactive Charts using Chart.js
-🛡️ Error Monitoring with Sentry
-🛠️ Tech Stack
-Frontend
-Next.js 14
-React 18
+
+
+⚙️ Tech Stack
+Next.js
 TypeScript
-Tailwind CSS
-Radix UI
-Chart.js
+Appwrite
+Plaid
+Dwolla
 React Hook Form
 Zod
-Backend & Services
-Appwrite
-Plaid API
-Dwolla API
-Sentry
-📦 Dependencies
+TailwindCSS
+Chart.js
+ShadCN
+🔋 Features
+👉 Authentication: An ultra-secure SSR authentication with proper validations and authorization
 
-Some major libraries used in the project:
+👉 Connect Banks: Integrates with Plaid for multiple bank account linking
 
-next
-react
-typescript
-tailwindcss
-chart.js
-react-chartjs-2
-react-hook-form
-zod
-plaid
-dwolla-v2
-node-appwrite
-@sentry/nextjs
-📂 Project Structure
-banking-app/
-│── app/
-│── components/
-│── constants/
-│── lib/
-│── public/
-│── styles/
-│── types/
-│── package.json
-│── tailwind.config.ts
-│── next.config.js
-⚙️ Installation & Setup
-1️⃣ Clone the Repository
-git clone https://github.com/ayushrawat00031/banking-app.git
-2️⃣ Navigate to the Project
-cd banking-app
-3️⃣ Install Dependencies
+👉 Home Page: Shows general overview of user account with total balance from all connected banks, recent transactions, money spent on different categories, etc
+
+👉 My Banks: Check the complete list of all connected banks with respective balances, account details
+
+👉 Transaction History: Includes pagination and filtering options for viewing transaction history of different banks
+
+👉 Real-time Updates: Reflects changes across all relevant pages upon connecting new bank accounts.
+
+👉 Funds Transfer: Allows users to transfer funds using Dwolla to other accounts with required fields and recipient bank ID.
+
+👉 Responsiveness: Ensures the application adapts seamlessly to various screen sizes and devices, providing a consistent user experience across desktop, tablet, and mobile platforms.
+
+and many more, including code architecture and reusability.
+
+🤸 Quick Start
+Follow these steps to set up the project locally on your machine.
+
+Prerequisites
+
+Make sure you have the following installed on your machine:
+
+Git
+Node.js
+npm (Node Package Manager)
+Cloning the Repository
+
+git clone https://github.com/Ayush00031/banking-app.git
+cd banking
+Installation
+
+Install the project dependencies using npm:
+
 npm install
-4️⃣ Setup Environment Variables
+Set Up Environment Variables
 
-Create a .env.local file in the root directory and add:
+Create a new file named .env in the root of your project and add the following content:
 
-NEXT_PUBLIC_APPWRITE_ENDPOINT=
+#NEXT
+NEXT_PUBLIC_SITE_URL=
+
+#APPWRITE
+NEXT_PUBLIC_APPWRITE_ENDPOINT=https://cloud.appwrite.io/v1
 NEXT_PUBLIC_APPWRITE_PROJECT=
 APPWRITE_DATABASE_ID=
 APPWRITE_USER_COLLECTION_ID=
 APPWRITE_BANK_COLLECTION_ID=
+APPWRITE_TRANSACTION_COLLECTION_ID=
+APPWRITE_SECRET=
 
+#PLAID
 PLAID_CLIENT_ID=
 PLAID_SECRET=
-PLAID_ENV=sandbox
+PLAID_ENV=
+PLAID_PRODUCTS=
+PLAID_COUNTRY_CODES=
 
+#DWOLLA
 DWOLLA_KEY=
 DWOLLA_SECRET=
+DWOLLA_BASE_URL=https://api-sandbox.dwolla.com
 DWOLLA_ENV=sandbox
+Replace the placeholder values with your actual respective account credentials. You can obtain these credentials by signing up on the Appwrite, Plaid and Dwolla
 
-SENTRY_AUTH_TOKEN=
-▶️ Running the App
-Development Mode
+Running the Project
+
 npm run dev
-Production Build
-npm run build
-npm start
-📊 Banking Dashboard
+Open http://localhost:3000 in your browser to view the project.
 
-The application includes:
+🕸️ Snippets
+.env.example
+exchangePublicToken
+user.actions.ts
+dwolla.actions.ts
+bank.actions.ts
+BankTabItem.tsx
+BankInfo.tsx
+Copy.tsx
+PaymentTransferForm.tsx
+Missing from the video (top right on the transaction list page) BankDropdown.tsx
+Pagination.tsx
+Category.tsx
+🔗 Links
+Assets used in the project can be found here
 
-Account balance overview
-Transaction history
-Expense analytics
-Money transfer functionality
-Interactive charts and graphs
-🔒 Security Features
-Secure API integrations
-Protected routes
-Form validation
-Error tracking with Sentry
-Environment variable protection
 
-🤝 Contributing
-
-Contributions are welcome!
-
-Fork the repository
-Create a feature branch
-git checkout -b feature-name
-Commit changes
-git commit -m "Added new feature"
-Push to GitHub
-git push origin feature-name
-Open a Pull Request
-📄 License
-
-This project is licensed under the MIT License.
-
-👨‍💻 Author
-
-Ayush Rawat
