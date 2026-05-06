@@ -89,7 +89,6 @@ Running the Project
 npm run dev
 Open http://localhost:3000 in your browser to view the project.
 
-🔗 Links
-Assets used in the project can be found here
+
 
 
